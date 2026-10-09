@@ -51,7 +51,7 @@ runButton.addEventListener('click', async () => {
   resultsBody.innerHTML = '<tr><td colspan="4">正在请求本站资源…</td></tr>';
   const checks = await Promise.all([
     fetchCheck('HTTPS 与健康文件', '/panovo-deployment-test-pages/health.json', 'application/json'),
-    fetchCheck('测试页面', '/panovo-deployment-test-pages/test', 'text/html'),
+    fetchCheck('测试页面', '/panovo-deployment-test-pages/test.html', 'text/html'),
     imageDecodeCheck('WebP 下载与解码', '/panovo-deployment-test-pages/media/panovo.webp'),
     imageDecodeCheck('AVIF 下载与解码', '/panovo-deployment-test-pages/media/panovo.avif'),
     fetchCheck('MP4 分段请求', '/panovo-deployment-test-pages/media/panovo.mp4', 'video/mp4', true),
